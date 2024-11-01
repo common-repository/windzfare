@@ -1,0 +1,172 @@
+.section.more_gap.causes{
+    padding-bottom: 75px;
+}
+.causes{
+    padding-bottom: 75px;
+    .windzfare_button_group{
+        text-align: center;
+        .windzfare_button{
+            padding: 13px 80px;
+        }
+    }
+    
+    &.bg_image_4{
+        .windzfare_title{
+            color: $white-color;
+        }
+    }
+}
+
+.windzfare_causes{
+    position: relative;
+    background: $white-color;
+    box-shadow: 0px 15px 25px rgba($primary-color, 0.12);
+    margin: 0px 0px 35px 0px;
+    .windzfare_causes_image{
+        
+        position: relative;
+        img{
+            width: 100%;
+        } 
+        
+        .windzfare_highlight_tag{
+            position: absolute;
+            bottom: 35px;
+            left: 40px;
+        }
+    } 
+    .windzfare_causes_content {
+        padding: 33px 35px 30px 35px;
+        h4{
+            position: relative;
+            color: $black-color;
+            font-size: $font-20;
+            line-height: 30px;
+            margin-bottom: 20px;
+            @include transition(color 0.5s, background-color 0.8s);
+            a{
+                color: $black-color;
+                &:hover{
+                    color: $primary-color;
+                }
+            }
+        }
+        p{
+            font-size: $font-18;
+            line-height: 28px;
+            color: #666666;
+        }
+        img{
+            width: auto;
+        }
+    }
+    &:hover .windzfare_causes_content h4{
+        color: $primary-color;
+    }
+    .windzfare_button_group{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 20px 30px;
+        .windzfare_button{
+            font-size: $font-12;
+            font-weight: $font-medium;
+            padding: 6px 25px;
+            background: transparent;
+            color: $primary-color;
+        }
+    }
+}
+
+
+/*--------- windzfare_causes_carousel Navs --------*/
+.owl-carousel.windzfare_causes_carousel.side_nav .owl-nav {
+    margin-top: 0px;
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: -1; 
+    
+    .owl-prev{
+        float: left;
+        margin-left: -60px;
+    }
+    .owl-next{
+        float: right;
+        margin-right: -60px;
+        i{
+            margin-left: 2px;
+        }
+    }
+}
+
+
+.owl-carousel.windzfare_causes_carousel .owl-nav {
+    margin-top: 0px;
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translateY(0%);
+    width: 100%;
+    z-index: -1;
+
+    .owl-prev,
+    .owl-next{
+        float: none;
+        margin: 0px 10px;
+    }
+    button.owl-prev, 
+    button.owl-next {
+        background: transparent;
+        color: $primary-color;
+        border: none;
+        padding: 0 !important;
+        font: inherit;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        border-radius: 100%;
+        @include bordered(2px, solid, $primary-color);
+        outline: none;
+        @include transition(color 0.5s, background-color 0.8s);
+    }
+    button.owl-prev:hover, 
+    button.owl-next:hover {
+        background: $primary-color;
+        color: $white-color;
+    }
+}
+/*--------- windzfare_causes_carousel Dots --------*/
+.owl-carousel.windzfare_causes_carousel .owl-dots {
+    position: relative;
+    text-align: center; 
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    button.owl-dot{
+        outline: none;
+        margin: 0px 5px;
+        span{
+            background: $black-color;
+            outline: none;
+            width: 10px;
+            height: 10px;
+            display: block;
+            border-radius: 100%;
+        }
+        &.active span{
+            background: $primary-color;
+        }
+    }
+    &.disabled{
+        display: none;
+    }
+}

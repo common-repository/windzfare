@@ -1,0 +1,82 @@
+.section.team.more_gap{
+    padding-bottom: 80px;
+}
+/*------- Team -------*/
+.teambox{
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    @include transition(all 0.5s ease);
+    .teambox_inner{
+        position: relative;
+        overflow: hidden;
+        margin: 0 auto;
+        @include transition(all 0.5s ease);
+        img{
+            width: 100%;
+        }
+    }
+    .teambox_intro{
+        width: 100%;
+        padding: 30px;
+        margin-top: 4px;
+        background: #fcf4f6;
+        @include transition(all 0.5s ease);
+        h5{
+            font-weight: $font-semibold;
+            color: $black-color;
+            margin-top: 12px;
+            margin-bottom: 0px;
+            @include transition(all 0.5s ease);
+        }
+        h6{
+            font-size: $font-12;
+            font-weight: $font-semibold;
+            text-transform: uppercase;
+            color: $primary-color;
+            letter-spacing: 3px;
+            margin-bottom: 0px;
+            @include transition(all 0.5s ease);
+        }
+    }
+    &:hover{
+        .teambox_intro{
+            background: $primary-color;
+            h5{
+                color: $white-color;
+            }
+            h6{
+                color: $white-color;
+            }
+        }
+    }
+    &.second{
+        .teambox_intro{
+            background: $second-color;
+        }
+    }
+    
+    &.third{
+        .teambox_intro{
+            background: $third-color;
+        }
+    }
+    
+    &.fourth{
+        .teambox_intro{
+            background: $fourth-color;
+        }
+    }
+    
+    &.fifth{
+        .teambox_intro{
+            background: $fifth-color;
+        }
+    }
+    
+    &.sixth{
+        .teambox_intro{
+            background: $sixth-color;
+        }
+    }
+}

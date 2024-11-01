@@ -1,0 +1,328 @@
+
+/*---------- Background ------------*/
+.woocommerce .col2-set .col-2, .woocommerce-page .col2-set .col-2,
+.woocommerce .col2-set .col-1, .woocommerce-page .col2-set .col-1{
+    max-width: 100%;
+}
+.windzfare-wrapper{
+
+    .bg_color_1{
+        background-color: #fbfcfd;
+    }
+    .bg_color_2{
+        background-color: #f0f4f6;
+    }
+
+    .overlapping_urgent_cause{
+        margin-top: -62px;
+        position: relative;
+        z-index: 3;
+    }
+    .urgent_cause_block{
+        position: relative;
+        background: $white-color;
+        padding: 60px 100px;
+        border-radius: 15px;
+        overflow: hidden;
+        &:before{
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(../images/layer1.png);
+            background-repeat: no-repeat;
+            background-position: bottom right;
+        }
+        &.fourth:before{
+            background-image: url(../images/layer2.png);
+        }
+        .urgent_cause_heading h3{
+            line-height: 36px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        .windzfare_progress_content .windzfare_progress_bar{
+            height: 8px;
+        }
+    }
+
+    .windzfare_highlight_tag{
+        background: $primary-color;
+        color: $white-color;
+        display: inline-block;
+        border-radius: 4px;
+        text-transform: uppercase;
+        font-size: $font-12;
+        font-weight: $font-regular;
+        line-height: 20px;
+        font-family: $heading-font;
+        letter-spacing: 3px;
+        padding: 4px 10px;
+    }
+
+    .give_donation{
+        margin-top: 15px;
+        .donation_amount_tab{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: $font-14;
+            line-height: 20px;
+            font-weight: $font-medium;
+            color: $primary-color;
+
+            .wp_fare_amount{
+                border-left: 1px solid #f6c0cb;
+                border-right: none;
+                border-bottom: none;
+                border-radius: 0;
+                border-top: none;
+                width: 85px;
+                padding: 5px;
+                height: 40px;
+            }
+        }
+        .select_currency_box{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fef9fa;
+            border-radius: 5px;
+            @include bordered(1px, solid, #f6c0cb);
+            outline: none;
+        }
+        .currency_dropdown{
+            margin: 0 20px;
+        }
+        .currency{
+            padding: 10px 10px 10px 10px;
+            @include bordered-left(1px, solid, #f6c0cb);
+        }
+        .select_amount_box{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: $font-14;
+            background: #fef9fa;
+            padding: 0px 0px;
+            border-radius: 5px;
+            @include bordered(1px, solid, #f6c0cb);
+            overflow: hidden;
+        }
+        .selectdonate{
+            @include bordered-right(1px, solid, #f6c0cb);
+            padding: 10px 10px 10px 10px;
+            width: 150px;
+        }
+        .select_amount{
+            width: 90px; 
+            height: 40px;
+            border: 0;
+            border-radius: 0px;
+            background: transparent;
+            color: $primary-color;
+            font-weight: $font-medium;
+            outline: 0px;
+            position: relative;
+            cursor: pointer;
+            display: inline-block;
+            text-align: center;
+            line-height: 40px;
+            &.radio_circle{
+                margin: 0px;
+                padding: 0px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .checkmark{
+                    position: relative;
+                    height: 6px;
+                    width: 6px;
+                    background: $primary-color;
+                    @include bordered (0px, solid, #788a9c);
+                    margin-right: 10px;
+                    &:after{
+                        display: none;
+                    }
+                }
+            }
+        }
+        .select_amount.active{
+            color: $white-color;
+            background: $primary-color;
+            &.radio_circle{
+                .checkmark{
+                    background: $white-color;
+                }
+            }
+        }
+        button.select_amount:focus{
+            outline: 0px;
+        }
+        .dot{
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            background: $primary-color;
+            border-radius: 100%;
+            margin-right: 10px;
+        }
+        .select_amount.active .dot{
+            background: $white-color;
+        }
+        .select_amount input[type=text] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            @include bordered(0px, solid, #f6c0cb);
+            border-radius: 0px;
+            background: $white-color;
+            color: $primary-color;
+            font-weight: $font-medium;
+            padding: 10px;
+            opacity: 0;
+            visibility: hidden;
+        }
+        .select_amount input[type=text]:focus{
+            outline: 0px;
+        }
+        .select_amount.custom.active input[type=text]{
+            opacity: 1;
+            visibility: visible;
+        }
+        .windzfare_button_group{
+            text-align: left;
+            margin: 20px 0px 0px 0px;
+        }
+        .windzfare_button {
+            font-size: $font-12;
+            padding: 8px 30px;
+            background: $primary-color;
+        }
+    }
+
+    /*--------- urgent_cause_carousel Navs --------*/
+    .owl-carousel.urgent_cause_carousel.side_nav .owl-nav {
+        margin-top: 0px;
+        text-align: center;
+        -webkit-tap-highlight-color: transparent;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        z-index: -1;
+        
+        .owl-prev{
+            float: left;
+            margin-left: -60px;
+        }
+        .owl-next{
+            float: right;
+            margin-right: -60px;
+        }
+    }
+
+
+    .owl-carousel.urgent_cause_carousel .owl-nav {
+        margin-top: 0px;
+        text-align: center;
+        -webkit-tap-highlight-color: transparent;
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translateY(0%);
+        width: 100%;
+        z-index: -1;
+
+        .owl-prev,
+        .owl-next{
+            float: none;
+            margin: 0px 10px;
+        }
+        button.owl-prev, 
+        button.owl-next {
+            background: $white-color;
+            color: $primary-color;
+            border: none;
+            padding: 0 !important;
+            font: inherit;
+            width: 30px;
+            height: 30px;
+            line-height: 28px;
+            border-radius: 100%;
+            @include bordered(2px, solid, $primary-color);
+            outline: none;
+            @include transition(color 0.5s, background-color 0.8s);
+        }
+        button.owl-prev:hover, 
+        button.owl-next:hover {
+            background: $primary-color;
+            color: $white-color;
+        }
+    }
+    /*--------- urgent_cause_carousel Dots --------*/
+    .owl-carousel.urgent_cause_carousel .owl-dots {
+        position: relative;
+        text-align: center; 
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        button.owl-dot{
+            outline: none;
+            margin: 0px 5px;
+            span{
+                background: $black-color;
+                outline: none;
+                width: 10px;
+                height: 10px;
+                display: block;
+                border-radius: 100%;
+            }
+            &.active span{
+                background: $primary-color;
+            }
+        }
+    }
+
+
+
+    @media screen and (max-width: $breakpoint-desktop) {
+        .give_donation{
+            .donation_amount_tab{
+                display: block;
+            }
+            .select_amount_box{
+                margin-top: 15px;
+            }
+            .select_amount{ 
+                display: none;
+            }
+            .select_amount.custom{
+                display: block;
+            }
+        }
+    }
+    @media screen and (max-width: $breakpoint-minimobile) {
+        .urgent_cause_block{
+            padding: 40px 40px;
+        }
+        .give_donation{
+            .selectdonate{
+                border-right: 0px;
+            }
+            .select_amount_box{
+                display: block;
+            }
+            .select_amount{
+                width: 100%;
+            }
+        }
+    }
+}
